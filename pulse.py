@@ -4,7 +4,8 @@ import json
 import os
 import subprocess
 
-api = Shodan("api_key")
+api_key = str(os.environ['shoden_key'])
+api = Shodan(api_key)
 limit = 500
 counter = 0
 os.system("touch ips")
